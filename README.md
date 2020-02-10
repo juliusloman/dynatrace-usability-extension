@@ -7,7 +7,7 @@ A Google chrome extension for greater usability of Dynatrace. Currently this ext
 
 ## Installation
 
-Download latest version of the extension from the [/releases] page and import it into your Chrome based browser. You might need to switch to Developer mode.
+Download latest version of the extension from the [Releases](/releases) page and import it into your Chrome based browser. You might need to switch to Developer mode.
 
 ## Settings
 
