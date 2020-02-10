@@ -1,0 +1,28 @@
+{
+   "author": "Julius Loman",
+   "browser_action": {
+      "default_icon": {
+         "128": "Assets/due128.png",
+         "16": "Assets/due16.png",
+         "48": "Assets/due48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "js": [ "main.js", "Third Party/jquery-3.3.1.min.js" ],
+      "matches": [ "https://*.live.dynatrace.com/*", "https://*.live.dynatrace.com/#problems/problemdetails*", "https://*/e/*/", "https://*.sprint.dynatracelabs.com/*", "https://*.dev.dynatracelabs.com/*" ],
+      "run_at": "document_idle"
+   } ],
+   "description": "Adds additional metadata to Dynatrace UI",
+   "icons": {
+      "128": "Assets/due128.png",
+      "16": "Assets/due16.png",
+      "48": "Assets/due48.png"
+   },
+   "manifest_version": 2,
+   "name": "Dynatrace Usability Extension",
+   "permissions": [ "declarativeContent", "activeTab", "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0",
+   "web_accessible_resources": [ "main.js", "popup.js" ]
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Dynatrace Usability Extension</title>
+    <link rel="stylesheet" href="/Third Party/main.css">
+    <link rel="stylesheet" href="popup.css">   
+    <script src="/Third Party/jquery-3.3.1.min.js"></script>
+    <script src="popup.js"></script>
+    
+</head>
+
+<body style="width: 300px; max-width: 400px">
+
+    <!-- Title of the popup along-side the Dynatrace logo -->
+    <div style="display: block; height: 100px; width: 80%; margin-left: 10%; margin-right: 10%; margin-top: 10px; text-align: center">
+        <img src="/Assets/dynatrace-logo.png" />
+        <h2 style="margin-top: 5px">Dynatrace Usability Extension</h3>
+    </div>
+
+    <div id="content" style="width: 80%; margin-left: 10%; margin-right: 10%">
+
+        <!-- Section which contains the API key associated with this SaaS tenant or Managed environment -->
+        <h4 style="margin-top: 10px">API key</h4>
+        <label for="api_key" class="label"></label>
+        <input type="text" class="inputfield" id="api_key" placeholder="smartscape access needed"/>
+        <!-- Warning message to show if the token works or not -->
+        <p id="bad_token" style="color: red; display: none">The token you entered is not valid</p>
+            <br /><br />
+
+        <h4 style="margin-top: 10px">Problem tag filter</h4>
+        <label for="tag_filter_key" class="label"></label>
+        <input type="text" class="inputfield" id="tag_filter_key" placeholder=".*"/>
+        
+        <h4 style="margin-top: 10px">Tenant color</h4>
+        <label for="tag_filter_key" class="label"></label>
+        <input type="color" class="inputfield" id="tenant_color" placeholder="#000000"/>                
+
+        <!-- Main save button -->
+        <button role="button" type="button" class="btn btn--primary" id="save" style="width: 100%">Save</button>  
+            <br /><br />        
+    </div>
+    
+    <!-- Placeholder to show then not on a Dynatrace environment -->
+    <div id="no_content" style="width: 80%; margin-left: 10%; margin-right: 10%; display: none">
+        Please visit a Dynatrace SaaS tenant or Managed environment to start configuring options!
+        <br /><br />
+    </div>
+        
+    <script src="/Third Party/main.js"></script>
+   
+   </body>
+
+</html>
